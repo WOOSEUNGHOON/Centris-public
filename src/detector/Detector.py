@@ -1,6 +1,6 @@
 
 """
-Dataset Collection Tool.
+Detector.
 Author:		Seunghoon Woo (seunghoonwoo@korea.ac.kr)
 Modified: 	December 16, 2020.
 """

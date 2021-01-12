@@ -3,7 +3,7 @@ Centris is a tool for identifying open-source components.
 Specifically, Centris can precisely and scalably identify components even when they were reused with code/structure modifications.
 Principles and experimental results are discussed in our paper, which will be published in 43rd International Conference on Software Engineering (ICSE'21).
 
-*The prototype of Centris will be opened soon at [IoTcube](https://iotcube.net).*
+*The prototype of Centris will be opened soon at IoTcube([https://iotcube.net](https://iotcube.net)).*
 
 ## How to use
 ### Requirements
@@ -75,28 +75,47 @@ python3 Detector.py /path/of/the/target/software
 
 
 ### Reproducing the results presented in the paper
-1. *Collect 10,000+ Git repositories for creating the component DB.*
-Note that we collected C/C++ repositories with more than 100 GitHub stars as of April 2020 in the paper.
-This process, depending on the number of repositories you collect, can take anywhere from days to weeks.
+For several reasons (including commercial usage of Centris and the massive size of the dataset), we release the component DB which can only be utilized to identify the list of OSS components (i.e., no version information).
 
-2. *Create the component DB using the [Preprocessor_full.py](https://github.com/WOOSEUNGHOON/Centris-public/blob/main/src/preprocessor/Preprocessor_full.py)*
+Therefore, there are two ways to reproduce the results of the paper: 
 
-3. *Execute the [Detector.py](https://github.com/WOOSEUNGHOON/Centris-public/blob/main/src/detector/Detector.py).*
+1. The case of executing all three modules from component DB construction to component identification;
 
-4. *See the results.*
+2. The case of using the dataset we provided.
 
-### Sample running of Centris 
-* For several reasons including commercial usage of Centris, we only release the component DB created using the lite preprocessor, [download here](https://drive.google.com/file/d/1phNAMunOTUQuaCOOK8MTap3YTzcmQw6A/view?usp=sharing) (5 GB).
+#### Case 1. Executing all three modules.
 
-1. After downloading the aforementioned file, extract it to centris-public/src/detector/.
+1. Collect 10,000+ Git repositories for creating the component DB. Note that we collected C/C++ repositories with more than 100 GitHub stars as of April 2020 in the paper. This process, depending on the number of repositories you collect, can take anywhere from days to weeks.
 
-2. Execute the [Detector_for_simple_testing.py](https://github.com/WOOSEUNGHOON/Centris-public/blob/main/src/detector/Detector_for_simple_testing.py).
+2. Create the component DB using the [Preprocessor_full.py](https://github.com/WOOSEUNGHOON/Centris-public/blob/main/src/preprocessor/Preprocessor_full.py)
 
+3. Execute the [Detector.py](https://github.com/WOOSEUNGHOON/Centris-public/blob/main/src/detector/Detector.py).
+
+4. See the results.
+
+#### Case 2. Using the provided dataset.
+
+Dataset: download [here](https://drive.google.com/file/d/1nyIeGB8wjV4mEZ3nZmlK8lwD5WgehSBL/view?usp=sharing) (5 GB).
+
+1. Extract the downloaded file (Centris_dataset.tar).
+
+2. There are four sample target software (ArangoDB, Crown, Cocos2dx, and Splayer, which are utilized in the in-depth comparison in the paper). 
+ + [2a] To check the detection result for these four target software programs, set "testmode" in line #194 of "Detector_for_OSSList.py" file to 1, and adjust only the file paths in lines #198 and #199 in the "Detector_for_OSSList.py" file.
+ + [2b] To check the detection result for other software programs, set "testmode" in line #194  of "Detector_for_OSSList.py" file to 0. 
+
+3. Execute the Detector_for_OSSList.py.
+
+[2a]
 ```
-python3 Detector_for_simple_testing.py /path/of/the/target/software
+python3 Detector_for_OSSList.py
 ```
 
-3. See the results.
+[2b]
+```
+python3 Detector_for_OSSList.py /path/of/the/target/software
+```
+
+4. See the results (default output path: ./res/.)
 
 ### About
 This repository is authored and maintained by Seunghoon Woo.

@@ -3,7 +3,7 @@ Centris is a tool for identifying open-source components.
 Specifically, Centris can precisely and scalably identify components even when they were reused with code/structure modifications.
 Principles and experimental results are discussed in our paper, which will be published in 43rd International Conference on Software Engineering (ICSE'21).
 
-*The prototype of Centris will be opened soon at IoTcube([https://iotcube.net](https://iotcube.net)).*
+*The prototype of Centris will be opened soon at IoTcube ([https://iotcube.net](https://iotcube.net)).*
 
 ## How to use
 ### Requirements
@@ -103,7 +103,7 @@ Dataset: download [here](https://drive.google.com/file/d/1nyIeGB8wjV4mEZ3nZmlK8l
  + [2a] To check the detection result for these four target software programs, set "testmode" in line #194 of "Detector_for_OSSList.py" file to 1, and adjust only the file paths in lines #198 and #199 in the "Detector_for_OSSList.py" file.
  + [2b] To check the detection result for other software programs, set "testmode" in line #194  of "Detector_for_OSSList.py" file to 0. 
 
-3. Execute the Detector_for_OSSList.py.
+3. Execute the "Detector_for_OSSList.py".
 
 [2a]
 ```

@@ -25,6 +25,9 @@ sudo pip3 install py-tlsh
 * We recommend a minimum of 32 GB RAM to utilize a large amount of OSS datasets for component identification.
 
 ### Running Centris
+
+If you have problems related to path information, try testing with absolute paths.
+
 #### OSSCollector (src/osscollector/)
 
 1. Collect git clone URLs (will be contained in the component DB) into a single file, as shown in the [sample](https://github.com/WOOSEUNGHOON/Centris-public/blob/main/src/osscollector/sample) file.
@@ -95,15 +98,17 @@ Therefore, there are two ways to reproduce the results of the paper:
 
 #### Case 2. Using the provided dataset.
 
-Dataset: download [here](https://drive.google.com/file/d/1nyIeGB8wjV4mEZ3nZmlK8lwD5WgehSBL/view?usp=sharing) (5 GB).
+Dataset: download [here](https://drive.google.com/file/d/1y5NqvS_4AjayDfQs8lPg2LIrIswwH1VZ/view?usp=sharing) (5 GB).
 
 1. Extract the downloaded file (Centris_dataset.tar).
 
-2. There are four sample target software (ArangoDB, Crown, Cocos2dx, and Splayer, which are utilized in the in-depth comparison in the paper). 
- + [2a] To check the detection result for these four target software programs, set "testmode" in line #194 of "Detector_for_OSSList.py" file to 1, and adjust only the file paths in lines #198 and #199 in the "Detector_for_OSSList.py" file.
- + [2b] To check the detection result for other software programs, set "testmode" in line #194  of "Detector_for_OSSList.py" file to 0. 
+2. Install Ctags and python-tlsh (see Requirements). Specify the ctags path in the "Detector_for_OSSList.py" file (line 22).
 
-3. Execute the "Detector_for_OSSList.py".
+3. There are four sample target software (ArangoDB, Crown, Cocos2dx, and Splayer, which are utilized in the in-depth comparison in the paper). 
+ + [2a] To check the detection result for these four target software programs, set "testmode" in line 193 of "Detector_for_OSSList.py" file to 1, and adjust the file paths in lines 196 and 197 in the "Detector_for_OSSList.py" file.
+ + [2b] To check the detection result for other software programs, set "testmode" in line 193 of "Detector_for_OSSList.py" file to 0. 
+
+4. Execute the "Detector_for_OSSList.py".
 
 [2a]
 ```
@@ -115,7 +120,7 @@ python3 Detector_for_OSSList.py
 python3 Detector_for_OSSList.py /path/of/the/target/software
 ```
 
-4. See the results (default output path: ./res/.)
+5. See the results (default output path: ./res/.)
 
 ### About
 This repository is authored and maintained by Seunghoon Woo.

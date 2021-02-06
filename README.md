@@ -3,6 +3,10 @@ Centris is a tool for identifying open-source components.
 Specifically, Centris can precisely and scalably identify components even when they were reused with code/structure modifications.
 Principles and experimental results are discussed in our paper, which will be published in 43rd International Conference on Software Engineering (ICSE'21).
 
+You are also available Centris source code and dataset on zenodo:
+ * [Source code](https://zenodo.org/record/4437945#.YB7nQ-gzaUk) (DOI: 10.5281/zenodo.4437945)
+ * [Dataset](https://zenodo.org/record/4514689#.YB7sN-gzaUk) (DOI: 10.5281/zenodo.4514689)
+
 *The prototype of Centris will be opened soon at IoTcube ([https://iotcube.net](https://iotcube.net)).*
 
 ## How to use
@@ -10,6 +14,7 @@ Principles and experimental results are discussed in our paper, which will be pu
 
 #### Software
 * ***Linux***: Centris is designed to work on any of the operating systems. However, currently, this repository only focuses on the Linux environment. Centris can be operated on Windows if some minor environment settings (e.g., the path of ctags parser used in OSSCollector) are changed.
+* ***Git***
 * ***Python 3***
 * ***[Universal-ctags](https://github.com/universal-ctags/ctags)***: for function parsing.
 * ***[Python3-tlsh](https://pypi.org/project/python-tlsh/)***: for function hashing.
@@ -20,6 +25,8 @@ How to install Python3-tlsh:
 sudo apt-get install pip3
 sudo pip3 install py-tlsh
 ```
+
+Our utilized versions: Python 3.9.1, python3-tlsh 4.5.0, and universal-ctags p5.9.20201227.0 on Ubuntu 18.04.
 
 #### Hardware
 * We recommend a minimum of 32 GB RAM to utilize a large amount of OSS datasets for component identification.
@@ -98,7 +105,8 @@ Therefore, there are two ways to reproduce the results of the paper:
 
 #### Case 2. Using the provided dataset.
 
-Dataset: download [here](https://drive.google.com/file/d/1y5NqvS_4AjayDfQs8lPg2LIrIswwH1VZ/view?usp=sharing) (5 GB).
+Dataset: download from [google driver](https://drive.google.com/file/d/1y5NqvS_4AjayDfQs8lPg2LIrIswwH1VZ/view?usp=sharing) or 
+[zenodo](https://zenodo.org/record/4514689#.YB7sN-gzaUk) (5 GB).
 
 1. Extract the downloaded file (Centris_dataset.tar).
 

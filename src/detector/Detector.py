@@ -273,7 +273,7 @@ def detector(inputDict, inputRepo):
 					if flag == 0:
 						unused += 1
 
-			fres.write(inputRepo, repoName, predictedVer, used, unused, modified, strChange, '\n')
+			fres.write('\t'.join(inputRepo, repoName, predictedVer, used, unused, modified, strChange) + '\n')
 	fres.close()
 
 

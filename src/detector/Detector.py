@@ -26,6 +26,7 @@ finalDBPath		= "../preprocessor/componentDB/"
 metaPath		= "../preprocessor/metaInfos/"
 aveFuncPath		= metaPath + "aveFuncs"
 weightPath		= metaPath + "weights/"
+ctagsPath		= "/usr/local/bin/ctags"
 
 
 shouldMake 	= [resultPath]

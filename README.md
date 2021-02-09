@@ -22,7 +22,7 @@ You are also available Centris source code and dataset on zenodo:
 How to install Python3-tlsh:
 
 ```
-sudo apt-get install pip3
+sudo apt-get install python3-pip
 sudo pip3 install py-tlsh
 ```
 

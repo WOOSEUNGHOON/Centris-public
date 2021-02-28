@@ -108,8 +108,7 @@ Therefore, there are two ways to reproduce the results of the paper:
 
 #### Case 2. Using the provided dataset.
 
-Dataset: download from [google driver](https://drive.google.com/file/d/1y5NqvS_4AjayDfQs8lPg2LIrIswwH1VZ/view?usp=sharing) or 
-[zenodo](https://zenodo.org/record/4514689#.YB7sN-gzaUk) (5 GB).
+Dataset: download from [zenodo](https://zenodo.org/record/4514689#.YB7sN-gzaUk) (5 GB).
 
 1. Extract the downloaded file (Centris_dataset.tar).
 

@@ -156,8 +156,7 @@ def saveMetaInfos():
 	allFuncJson = {}
 	uniqueJson	= []
 	unique 		= {}
-	weightJson	= {}
-
+	
 
 	fave = open(metaPath + "aveFuncs", 'w')
 	fall = open(metaPath + "allFuncs", 'w')
@@ -165,6 +164,7 @@ def saveMetaInfos():
 	
 
 	for OSS in os.listdir(initialDBPath):
+		weightJson	= {}
 		repoName 	= OSS.replace("_sig", "")
 		totFuncs 	= 0
 		totVers 	= len(os.listdir(resultPath + repoName))

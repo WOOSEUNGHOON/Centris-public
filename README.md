@@ -19,6 +19,11 @@ $ sudo docker run -it seunghoonwoo/centris_code:latest
 ```
 * Put the root directory of the target program in which OSS components are to be detected to the *"SOURCE_DIR_ROOT_PATH"*.
 * Put the name of the program (any name you want) to the *"PACKAGE _NAME"*.
+* For example, 
+```
+# git clone https://github.com/redis/redis   // Cloning the Redis repository for testing
+# python3 Detector.py "./redis/" "Redis" 0 "linux"
+```
 
 The list of OSS components detected in the input source program is stored under the *"./res/PACKAGE_NAME"*.
 

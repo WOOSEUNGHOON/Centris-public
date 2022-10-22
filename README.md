@@ -7,7 +7,7 @@ You are available Centris source code and dataset on zenodo:
  * [Source code](https://zenodo.org/record/4437945#.YB7nQ-gzaUk) (DOI: 10.5281/zenodo.4437945)
  * [Dataset](https://zenodo.org/record/4514689#.YB7sN-gzaUk) (DOI: 10.5281/zenodo.4514689)
 
-You can also test Centris using Docker [Oct. 2022 updated]:
+You can also test Centris using Docker **[Oct. 2022 updated]**:
  * [Centris Docker hub](https://hub.docker.com/repository/docker/seunghoonwoo/centris_code)
 
 How to use Centris in Docker:

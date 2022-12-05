@@ -239,39 +239,38 @@ def detector(inputDict, inputRepo):
 			for ohash in predictOSSDict:
 				flag = 0
 
-				for thash in inputDict:
-					if ohash == thash:
-						used += 1
+				if ohash in inputDict:
+					used += 1
 
-						nflag = 0
-						for opath in predictOSSDict[ohash]:
-							for tpath in inputDict[thash]:
-								if opath in tpath:
-									nflag = 1
+					nflag = 0
+					for opath in predictOSSDict[ohash]:
+						for tpath in inputDict[ohash]:
+							if opath in tpath:
+								nflag = 1
+					if nflag == 0:
+						strChange = True
 
-						if nflag == 0:
-							strChange = True
-
-						flag = 1
-
-					else:
+					flag = 1
+				
+				else:
+					for thash in inputDict:
 						score = tlsh.diffxlen(ohash, thash)
 						if int(score) <= 30:
 							modified += 1
 
-						nflag = 0
-						for opath in predictOSSDict[ohash]:
-							for tpath in inputDict[thash]:
-								if opath in tpath:
-									nflag = 1
+							nflag = 0
+							for opath in predictOSSDict[ohash]:
+								for tpath in inputDict[thash]:
+									if opath in tpath:
+										nflag = 1
+							if nflag == 0:
+								strChange = True
 
-						if nflag == 0:
-							strChange = True
+							flag = 1
 
-						flag = 1
-
-					if flag == 0:
-						unused += 1
+							break  # TODO: Suppose just only one function meet.
+				if flag == 0:
+					unused += 1
 
 			fres.write('\t'.join([inputRepo, repoName, predictedVer, str(used), str(unused), str(modified), str(strChange)]) + '\n')
 	fres.close()

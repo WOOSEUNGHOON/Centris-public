@@ -7,10 +7,28 @@ You are available Centris source code and dataset on zenodo:
  * [Source code](https://zenodo.org/record/4437945#.YB7nQ-gzaUk) (DOI: 10.5281/zenodo.4437945)
  * [Dataset](https://zenodo.org/record/4514689#.YB7sN-gzaUk) (DOI: 10.5281/zenodo.4514689)
 
-You can also test Centris using Docker:
- * [Centris Docker hub](https://hub.docker.com/r/seunghoonwoo/centris-public)
+You can also test Centris using Docker **[Oct. 2022 updated]**:
+ * [Centris Docker hub](https://hub.docker.com/repository/docker/seunghoonwoo/centris_code)
 
-*The prototype of Centris will be opened soon at IoTcube ([https://iotcube.net](https://iotcube.net)).*
+How to use Centris in Docker:
+
+```
+$ sudo docker run -it seunghoonwoo/centris_code:latest
+# cd /home/code
+# python3 Detector.py "SOURCE_DIR_ROOT_PATH" "PACKAGE_NAME" 0 "linux"
+```
+* Put the root directory of the target program in which OSS components are to be detected to the *"SOURCE_DIR_ROOT_PATH"*.
+* Put the name of the program (any name you want) to the *"PACKAGE _NAME"*.
+* For example, 
+```
+# git clone https://github.com/redis/redis   // Cloning the Redis repository for testing
+# python3 Detector.py "./redis/" "Redis" 0 "linux"
+```
+
+The list of OSS components detected in the input source program is stored under the *"./res/PACKAGE_NAME"*.
+
+
+*The prototype of Centris (with 2,000 OSS projects) can be tested in IoTcube ([https://iotcube.net](https://iotcube.net)).*
 
 ## How to use
 ### Requirements

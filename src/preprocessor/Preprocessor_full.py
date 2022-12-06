@@ -11,6 +11,7 @@ import re
 import shutil
 import json
 import math
+import tlsh
 
 """GLOBALS"""
 currentPath		= os.getcwd()

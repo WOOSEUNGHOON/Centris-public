@@ -1,7 +1,12 @@
 # Centris
 Centris is a tool for identifying open-source components.
 Specifically, Centris can precisely and scalably identify components even when they were reused with code/structure modifications.
-Principles and experimental results are discussed in our paper, which will be published in 43rd International Conference on Software Engineering (ICSE'21).
+Principles and experimental results are discussed in our paper, which was published in 43rd International Conference on Software Engineering (ICSE'21).
+
+## Notice
+**Currently, the patent of CENTRIS is held in [LABRADOR LABS](https://labradorlabs.ai/), and thus commercial usage of this repository and source code is not allowed.**
+
+## How to use Centris (using Docker)
 
 You are available Centris source code and dataset on zenodo:
  * [Source code](https://zenodo.org/record/4437945#.YB7nQ-gzaUk) (DOI: 10.5281/zenodo.4437945)
@@ -30,7 +35,7 @@ The list of OSS components detected in the input source program is stored under 
 
 *The prototype of Centris (with 2,000 OSS projects) can be tested in IoTcube ([https://iotcube.net](https://iotcube.net)).*
 
-## How to use
+## How to use Centris (built from source code)
 ### Requirements
 
 #### Software

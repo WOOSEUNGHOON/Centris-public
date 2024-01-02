@@ -96,7 +96,7 @@ def redundancyElimination():
 					verDict[versionName] = idx
 					idx += 1
 					body = ''.join(fp.readlines()).strip()
-					for eachLine in body.split('\n')[1:-1]:
+					for eachLine in body.split('\n')[1:]:
 						if eachLine == '' or eachLine == ' ':
 							continue
 

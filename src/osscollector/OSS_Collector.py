@@ -199,7 +199,7 @@ def main():
 							if not os.path.isdir(resultPath + repoName):
 								os.mkdir(resultPath + repoName)
 							title = '\t'.join([repoName, str(fileCnt), str(funcCnt), str(lineCnt)])
-							resultFilePath 	= resultPath + repoName + '/fuzzy_' + tag + '.hidx'
+							resultFilePath 	= resultPath + repoName + '/fuzzy_' + tag.replace("/", "-tag-") + '.hidx'
 						
 							indexing(resDict, title, resultFilePath)
 						

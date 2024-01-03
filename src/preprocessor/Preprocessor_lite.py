@@ -83,7 +83,7 @@ def redundancyElimination():
 		idx        = 0		
 
 		for eachVersion in os.listdir(os.path.join(resultPath, repoName)):
-			versionName = eachVersion.split("fuzzy_")[1].replace(".hidx", "")
+			versionName = eachVersion.split("fuzzy_")[1].replace(".hidx", "").replace("-tag-", "/")
 			if versionName == '' or versionName == " ":
 				continue
 			verTempLst.append(versionName)
@@ -91,7 +91,7 @@ def redundancyElimination():
 
 		try:
 			for versionName in verTempLst:
-				with open(os.path.join(resultPath, repoName, ("fuzzy_" + versionName + ".hidx")), 'r', encoding = "UTF-8") as fp:
+				with open(os.path.join(resultPath, repoName, ("fuzzy_" + versionName.replace("/", "-tag-") + ".hidx")), 'r', encoding = "UTF-8") as fp:
 					verDict[versionName] = idx
 					idx += 1
 					body = ''.join(fp.readlines()).strip()
